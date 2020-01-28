@@ -9,6 +9,9 @@ export const Fild = styled.div`
   grid-column-gap: 30px;
   grid-row-gap: 15px;
   align-items: center;
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: 1fr !important;
+  }
   h4 {
     line-height: 0;
     color: #0a1938;

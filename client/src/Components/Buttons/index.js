@@ -16,6 +16,9 @@ export const ButtonWhite = styled.button`
     color: white;
     cursor: pointer;
   }
+  @media only screen and (max-width: 600px) {
+    margin: 1em 0;
+  }
 `;
 export const Button = styled.button`
   background-color: #6923e7;

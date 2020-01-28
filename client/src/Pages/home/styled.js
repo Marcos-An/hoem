@@ -3,12 +3,10 @@ import styled from 'styled-components';
 export const Boddy = styled.div`
   display: flex;
   justify-content: center;
-  height: 200px;
 `;
 
 export const Search = styled.div`
   z-index: 99;
-  height: 55vh;
   width: 95vw;
   margin-top: -100px;
   background: white;
@@ -17,6 +15,10 @@ export const Search = styled.div`
 
 export const Box = styled.div`
   padding: 2% 6%;
+
+  @media screen and (max-width: 600px) {
+    padding: 2% 6% 6% 6%;
+  }
 `;
 
 export const Title = styled.h1``;
@@ -33,6 +35,9 @@ export const BoddyCard = styled.div`
   align-items: center;
   flex-direction: column;
   margin: 9% 3% 3% 3%;
+  @media screen and (max-width: 600px) {
+    margin: 15% 3% 3% 3%;
+  }
 `;
 
 export const CardBox = styled.div`
@@ -41,4 +46,7 @@ export const CardBox = styled.div`
   grid-gap: 30px;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 600px) {
+    grid-template-columns: repeat(1, 90vw);
+  }
 `;
