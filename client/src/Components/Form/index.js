@@ -1,12 +1,16 @@
 import React from 'react';
 import Filds from './filds';
-import { Form } from './Styles';
+import { Form } from './styled';
+import { Provider } from 'react-redux';
+import store from '../../store';
 
 const FormFilds = () => {
   return (
-    <Form>
-      <Filds />
-    </Form>
+    <Provider store={store}>
+      <Form>
+        <Filds />
+      </Form>
+    </Provider>
   );
 };
 

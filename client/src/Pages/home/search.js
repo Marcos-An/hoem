@@ -1,5 +1,5 @@
 import React from 'react';
-import { Boddy, Search, Box, Title } from './Styles/search';
+import { Boddy, Search, Box, Title } from './styled';
 import Form from '../../Components/Form';
 
 const SearchForm = () => {
