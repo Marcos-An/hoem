@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Cards from '../../Components/Cards';
 import { CardBox, Title, BoddyCard, UpperTitle } from './styled';
 
-const API_URL = '/api/imovel';
+const API_URL = '/api/imoveis';
 
 function Card() {
   const [imoveis, setImoveis] = useState([]);

@@ -18,10 +18,10 @@ const imoveis = require('./model/imoveis');
 
 //PASSAR INFOS PARA JSON
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //ROUTES
-app.use('/api', require('./routes'));
-app.use('/api/imovel', require('./routes/imoveis'));
+app.use('/api', require('./routes/index'));
+app.use('/api/imoveis', require('./routes/imoveis'));
 
 module.exports = app;
