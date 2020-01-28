@@ -6,13 +6,10 @@ const cors = require('cors');
 const app = express();
 
 //CONECTANDO COM O MONGO
-mongoose.connect(
-  'mongodb+srv://admin:123@hoem-ij4ev.gcp.mongodb.net/test?retryWrites=true&w=majority',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  }
-);
+mongoose.connect(process.env.MONGO_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 //CORS
 app.use(cors());
