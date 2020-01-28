@@ -25,8 +25,8 @@ function Card() {
       <UpperTitle>nossos</UpperTitle>
       <Title>IMÓVEIS</Title>
       <CardBox>
-        {imoveis.map(index => (
-          <Cards key={index} />
+        {imoveis.map((item, index) => (
+          <Cards key={index} imovel={item} index={index} />
         ))}
       </CardBox>
     </BoddyCard>

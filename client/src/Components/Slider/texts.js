@@ -1,5 +1,5 @@
 import React from 'react';
-import { Title, SubTitle, UpperTitle, Box } from './Styles/text';
+import { Title, SubTitle, UpperTitle, Box } from './styled';
 import { ButtonWhite } from '../Buttons';
 
 const Text = () => {

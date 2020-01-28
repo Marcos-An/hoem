@@ -1,5 +1,18 @@
 import styled from 'styled-components';
 
+export const Slide = styled.div`
+  position: relative;
+  padding: 0% 1.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(${props => props.image});
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 700px;
+  overflow: hidden;
+  transition: 0.5s ease;
+`;
 export const Box = styled.div`
   display: flex;
   flex-direction: column;
@@ -10,6 +23,7 @@ export const Box = styled.div`
     padding: 15px;
   }
 `;
+
 export const Title = styled.h1`
   color: white;
   font-weight: 1000;

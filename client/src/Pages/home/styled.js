@@ -42,7 +42,7 @@ export const BoddyCard = styled.div`
 
 export const CardBox = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 25vw);
+  grid-template-columns: repeat(3, 29vw);
   grid-gap: 30px;
   justify-content: center;
   align-items: center;

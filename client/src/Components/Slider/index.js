@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import LeftArrow from './leftArrow';
-import RightArrow from './rightArrow';
-import { Slide } from './Styles/styles';
+import LeftArrow from '../Arrows/leftArrow';
+import RightArrow from '../Arrows/rightArrow';
+import { Slide } from './styled';
 import Texts from './texts';
 
 const Slider = () => {
