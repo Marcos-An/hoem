@@ -41,5 +41,4 @@ export const CardBox = styled.div`
   grid-gap: 30px;
   justify-content: center;
   align-items: center;
-  height: 70vh;
 `;

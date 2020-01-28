@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //ROUTES
 
-app.use('/api', require('./routes'));
-app.use('/api/imoveis', require('./routes/imoveis'));
+app.use('/', require('./routes'));
+app.use('/api', require('./routes/imoveis'));
 
 module.exports = app;
