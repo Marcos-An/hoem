@@ -21,6 +21,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //ROUTES
-app.use('/api', require('./routes/imoveis'));
+app.use('/api', require('./routes'));
+app.use('/api/imovel', require('./routes/imoveis'));
 
 module.exports = app;

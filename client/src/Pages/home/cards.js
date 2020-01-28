@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import Cards from '../../Components/Cards';
 import { CardBox, Title, BoddyCard, UpperTitle } from './styled';
 
-const API_URL = '/api';
+const API_URL = '/api/imovel';
 
 function Card() {
   const [imoveis, setImoveis] = useState([]);
 
   useEffect(() => {
     callApi()
-      .then(result => setImoveis(result))
+      .then(result => setImoveis(result.splice(0, 6)))
       .catch(() => console.log('Error'));
   }, []);
 
