@@ -52,6 +52,11 @@ export const Images = styled.div`
   border-radius: 10px;
   background-image: url(${props => props.img});
   background-size: cover;
+
+  @media screen and (max-width: 600px) {
+    width: 90%;
+    height: 30%;
+  }
 `;
 
 export const Modal = styled.div`
@@ -74,5 +79,6 @@ export const Modal = styled.div`
     position: absolute;
   }
   @media screen and (max-width: 600px) {
+    padding: 0;
   }
 `;

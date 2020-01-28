@@ -8,17 +8,11 @@ const RightArrow = props => {
     <>
       {props.index + 1 === props.item ? (
         <ArrowNone>
-          <FontAwesomeIcon
-            icon={faChevronRight}
-            style={{ fontSize: 25, color: 'white' }}
-          />
+          <FontAwesomeIcon className="arrow" icon={faChevronRight} />
         </ArrowNone>
       ) : (
         <Arrow onClick={() => props.next()}>
-          <FontAwesomeIcon
-            icon={faChevronRight}
-            style={{ fontSize: 25, color: 'white' }}
-          />
+          <FontAwesomeIcon className="arrow" icon={faChevronRight} />
         </Arrow>
       )}
     </>

@@ -7,9 +7,20 @@ export const Arrow = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  .arrow {
+    font-size: 25px;
+    color: white;
+  }
   :hover {
     background-color: #6923e7;
     cursor: pointer;
+  }
+  @media screen and (max-width: 600px) {
+    height: 40px;
+    width: 40px;
+    .arrow {
+      font-size: 13px;
+    }
   }
 `;
 
@@ -21,4 +32,15 @@ export const ArrowNone = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  .arrow {
+    font-size: 25px;
+    color: white;
+  }
+  @media screen and (max-width: 600px) {
+    height: 30px;
+    width: 30px;
+    .arrow {
+      font-size: 13px;
+    }
+  }
 `;

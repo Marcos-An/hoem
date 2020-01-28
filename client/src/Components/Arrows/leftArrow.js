@@ -8,17 +8,11 @@ const LeftArrow = props => {
     <>
       {props.index === 0 ? (
         <ArrowNone>
-          <FontAwesomeIcon
-            icon={faChevronLeft}
-            style={{ fontSize: 25, color: 'white' }}
-          />
+          <FontAwesomeIcon className="arrow" icon={faChevronLeft} />
         </ArrowNone>
       ) : (
         <Arrow onClick={() => props.prev()}>
-          <FontAwesomeIcon
-            icon={faChevronLeft}
-            style={{ fontSize: 25, color: 'white' }}
-          />
+          <FontAwesomeIcon className="arrow" icon={faChevronLeft} />
         </Arrow>
       )}
     </>
