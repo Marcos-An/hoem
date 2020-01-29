@@ -9,8 +9,8 @@ export const Body = styled.div`
 
   div {
     top: 33px;
-    width: 13px;
-    height: 13px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background: #6923e7;
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
