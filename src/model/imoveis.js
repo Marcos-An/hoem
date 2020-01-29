@@ -2,6 +2,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
+  id_imovel: {
+    type: String,
+    required: true,
+    unique: true
+  },
   finalidade: {
     type: String,
     required: true,
@@ -24,6 +29,10 @@ const schema = new Schema({
     type: String,
     required: true
   },
+  endereco: {
+    type: String,
+    required: true
+  },
   preco: {
     type: Number,
     required: true
@@ -42,6 +51,10 @@ const schema = new Schema({
   },
   comodos: {
     type: Number,
+    required: true
+  },
+  usuario: {
+    type: String,
     required: true
   },
   sobre: {

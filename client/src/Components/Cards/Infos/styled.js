@@ -13,7 +13,7 @@ export const PriceBox = styled.div`
 export const EnderecoBox = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: top;
 `;
 export const PropertyPrice = styled.h5`
   font-size: 14px;
@@ -27,16 +27,18 @@ export const Price = styled.h3`
   color: #6923e7;
 `;
 export const Name = styled.h3`
-  font-size: 15px;
-  line-height: 0px;
+  font-size: 18px;
   font-weight: 600;
+  margin: 0px 0px 15px 0px;
+  padding: 0px;
   color: #000;
 `;
 export const Endereco = styled.h4`
   font-size: 15px;
-  line-height: 0px;
   font-weight: 400;
   color: #7e7e7e;
+  padding: 0px;
+  margin: 0px;
 `;
 export const Divider = styled.div`
   height: 1px;

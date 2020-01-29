@@ -18,3 +18,11 @@ exports.post = async (req, res) => {
     res.status(400).send(error);
   }
 };
+
+exports.put = (req, res) => {
+  action.update(req, res);
+};
+
+exports.delete = (req, res) => {
+  action.remove(req, res);
+};

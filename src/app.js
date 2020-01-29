@@ -8,7 +8,8 @@ const app = express();
 //CONECTANDO COM O MONGO
 mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useCreateIndex: true
 });
 
 //CORS

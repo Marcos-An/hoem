@@ -19,7 +19,7 @@ function Infos(props) {
       <EnderecoBox>
         <Point />
         &ensp;
-        <Endereco>{imovel.sobre}</Endereco>
+        <Endereco>{imovel.endereco}</Endereco>
       </EnderecoBox>
       <Divider />
       <HasInHome imovel={imovel} />
