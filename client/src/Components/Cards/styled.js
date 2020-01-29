@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Body = styled.div`
-  height: 320px;
   width: 100%;
   background-color: white;
   border-radius: 8px;
@@ -14,7 +13,7 @@ export const Body = styled.div`
 
 export const Img = styled.div`
   width: 100%;
-  height: 60%;
+  height: 200px;
   border-radius: 8px 8px 0px 0px;
   background-image: url('${props => props.img}');
   background-size: cover;
@@ -52,6 +51,7 @@ export const Images = styled.div`
   border-radius: 10px;
   background-image: url(${props => props.img});
   background-size: cover;
+  background-position: center;
 
   @media screen and (max-width: 600px) {
     width: 90%;

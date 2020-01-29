@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Layout from '../Layout';
-import Home from '../Pages/home';
-import Contact from '../Pages/contact';
+
+const Home = lazy(() => import('../Pages/home'));
 
 export default function routes() {
   return (
     <BrowserRouter>
-      <Layout>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/contato" component={Contact} />
-        </Switch>
-      </Layout>
+      <Suspense fallback={<h1>Rendering...</h1>}>
+        <Layout>
+          <Switch>
+            <Route exact path="/" component={() => <Home />} />
+          </Switch>
+        </Layout>
+      </Suspense>
     </BrowserRouter>
   );
 }

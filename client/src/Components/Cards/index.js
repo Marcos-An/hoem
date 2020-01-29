@@ -4,6 +4,7 @@ import LeftArrow from '../Arrows/leftArrow';
 import RightArrow from '../Arrows/rightArrow';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCamera, faTimes } from '@fortawesome/free-solid-svg-icons';
+import Infos from './Infos';
 
 const openTab = index => {
   var Modal = document.getElementsByClassName('Modal');
@@ -53,6 +54,7 @@ function Cards(props) {
           index={index}
         />
       </Modal>
+      <Infos imovel={props.imovel} />
     </Body>
   );
 }
