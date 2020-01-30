@@ -21,12 +21,28 @@ export const Box = styled.div`
   }
 `;
 
-export const Title = styled.h1``;
+export const Title = styled.h1`
+  margin: 0px;
+  text-align: center;
+  @media screen and (max-width: 600px) {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+`;
 
-export const UpperTitle = styled.h3`
+export const UpperTitle = styled.p`
   color: #6923e7;
-  line-height: 0;
-  margin-bottom: -7px;
+  text-align: center;
+`;
+
+export const Welcome = styled.h1`
+  font-size: 50px;
+  line-height: 1;
+`;
+
+export const SubTitle = styled.p`
+  color: #fff;
+  margin-top: -14px;
 `;
 
 export const BoddyCard = styled.div`
@@ -42,11 +58,28 @@ export const BoddyCard = styled.div`
 
 export const CardBox = styled.div`
   display: grid;
+  padding: 3% 0%;
   grid-template-columns: repeat(3, 29vw);
   grid-gap: 30px;
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 600px) {
     grid-template-columns: repeat(1, 90vw);
+  }
+`;
+
+export const Agentes = styled.div`
+  height: 450px;
+  display: flex;
+  margin: 8% 0% 5% 0%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(${props => props.img});
+  background-repeat: no-repeat;
+  background-position: left;
+
+  @media screen and (max-width: 600px) {
+    text-align: center;
   }
 `;

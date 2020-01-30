@@ -12,7 +12,7 @@ export const ButtonWhite = styled.button`
   border: none;
   border-radius: 5px;
   :hover {
-    background-color: #6923e7;
+    background-color: #6f42c1;
     color: white;
     cursor: pointer;
   }
@@ -33,7 +33,7 @@ export const Button = styled.button`
   border: none;
   border-radius: 5px;
   :hover {
-    background-color: #6923e7;
+    background-color: #6f42c1;
     color: white;
     cursor: pointer;
   }

@@ -26,7 +26,7 @@ export const Box = styled.div`
 
 export const Title = styled.h1`
   color: white;
-  font-weight: 1000;
+  font-weight: 600;
   font-size: 60px;
   line-height: 0;
   @media only screen and (max-width: 600px) {
