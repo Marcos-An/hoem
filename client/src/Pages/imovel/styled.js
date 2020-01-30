@@ -1,5 +1,5 @@
-import styled from `styled-components`
+import styled from 'styled-components';
 
 export const Body = styled.div`
-  padding: 5%
-`
+  padding: 5%;
+`;

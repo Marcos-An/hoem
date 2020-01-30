@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Body } from './styled';
 
 const API_URL = '/api/imoveis/';
 

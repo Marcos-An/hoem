@@ -14,6 +14,7 @@ export default function routes() {
           <Switch>
             <Route exact path="/" component={() => <Home />} />
             <Route
+              exact
               path="/imovel/:id_imovel"
               component={matchProps => <Imovel {...matchProps} />}
             />
