@@ -10,7 +10,9 @@ function Rent(props) {
 
   return (
     <PriceBox>
-      <Price>{preco}</Price>
+      <a href={`/imovel/${props.imovel.id_imovel}`}>
+        <Price>{preco}</Price>
+      </a>
       &#160;
       <PropertyPrice>mensal</PropertyPrice>
     </PriceBox>

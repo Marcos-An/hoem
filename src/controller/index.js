@@ -26,3 +26,6 @@ exports.put = (req, res) => {
 exports.delete = (req, res) => {
   action.remove(req, res);
 };
+exports.getById = (req, res) => {
+  action.ById(req, res);
+};

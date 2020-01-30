@@ -13,3 +13,6 @@ html {
 * {
   outline: none;
 }
+a {
+  text-decoration: none; /* no underline */
+}

@@ -30,3 +30,13 @@ exports.remove = async (req, res) => {
       res.status(400).send({ erro: e });
     });
 };
+
+exports.ById = async (req, res) => {
+  Imoveis.findOne({
+    id_imovel: req.params.id_imovel
+  })
+    .then(data => res.status(200).send(data))
+    .catch(e => {
+      res.status(400).send({ erro: e });
+    });
+};

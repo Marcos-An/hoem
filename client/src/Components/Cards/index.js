@@ -33,7 +33,9 @@ function Cards(props) {
   };
   return (
     <Body>
-      <Img img={props.imovel.imagens[0]} />
+      <a href={`/imovel/${props.imovel.id_imovel}`}>
+        <Img img={props.imovel.imagens[0]} />
+      </a>
       <BoxIcon onClick={() => openTab(props.index)}>
         <FontAwesomeIcon
           icon={faCamera}

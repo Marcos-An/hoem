@@ -9,7 +9,6 @@ function Infos(props) {
   const imovel = props.imovel;
   return (
     <Body>
-      {console.log(imovel)}
       {imovel.finalidade === 'Venda' ? (
         <Sale imovel={imovel} />
       ) : (

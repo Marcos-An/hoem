@@ -12,7 +12,9 @@ function Sale(props) {
     <PriceBox>
       <PropertyPrice>por</PropertyPrice>
       &#180;
-      <Price>{preco}</Price>
+      <a href={`/imovel/${props.imovel.id_imovel}`}>
+        <Price>{preco}</Price>
+      </a>
     </PriceBox>
   );
 }
