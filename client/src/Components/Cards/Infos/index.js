@@ -14,7 +14,7 @@ function Infos(props) {
       ) : (
         <Rent imovel={imovel} />
       )}
-      <Name>{`${imovel.tipo} - ${imovel.cidade}-${imovel.estado}`}</Name>
+      <Name>{`${imovel.tipo}, ${imovel.cidade}-${imovel.estado}`}</Name>
       <EnderecoBox>
         <Point />
         &ensp;

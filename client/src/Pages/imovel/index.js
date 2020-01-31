@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import BasicInfo from './basicInfo';
 import { Body } from './styled';
 
 const API_URL = '/api/imoveis/';
@@ -6,25 +7,16 @@ const API_URL = '/api/imoveis/';
 export default function Imovel(props) {
   const ID = props.match.params.id_imovel;
   const [imovel, setImovel] = useState([]);
-
   useEffect(() => {
-    callApi()
+    fetch(`${API_URL}${ID}`)
+      .then(result => result.json())
       .then(result => setImovel(result))
       .catch(() => console.log('Error'));
-  }, []);
-
-  const callApi = async () => {
-    const response = await fetch(`${API_URL}${ID}`);
-    const body = await response.json();
-    if (response.status !== 200) throw Error(body.message);
-
-    return body;
-  };
-  console.log(imovel);
+  }, [ID]);
 
   return (
-    <div>
-      <h1>{imovel.cidade}</h1>
-    </div>
+    <Body>
+      <BasicInfo imovel={imovel} />
+    </Body>
   );
 }

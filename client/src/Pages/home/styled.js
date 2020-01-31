@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Boddy = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
 
 export const Search = styled.div`
@@ -23,7 +24,7 @@ export const Box = styled.div`
 
 export const Title = styled.h1`
   margin: 0px;
-  text-align: center;
+  margin-bottom: 10px;
   @media screen and (max-width: 600px) {
     font-size: 25px;
     margin-bottom: 20px;
@@ -50,7 +51,7 @@ export const BoddyCard = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 9% 3% 3% 3%;
+  margin: 5% 3% 3% 3%;
   @media screen and (max-width: 600px) {
     margin: 15% 3% 3% 3%;
   }
