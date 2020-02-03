@@ -13,6 +13,7 @@ export const Slide = styled.div`
   overflow: hidden;
   transition: 0.5s ease;
 `;
+
 export const Box = styled.div`
   display: flex;
   flex-direction: column;

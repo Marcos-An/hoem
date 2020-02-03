@@ -40,3 +40,13 @@ exports.ById = async (req, res) => {
       res.status(400).send({ erro: e });
     });
 };
+
+exports.ByTag = async (req, res) => {
+  Imoveis.find({
+    finalidade: req.params.finalidade
+  })
+    .then(data => res.status(200).send(data))
+    .catch(e => {
+      res.status(400).send({ erro: e });
+    });
+};

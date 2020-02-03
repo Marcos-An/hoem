@@ -24,7 +24,10 @@ export const Cama = () => {
 };
 export const Bath = () => {
   return (
-    <FontAwesomeIcon icon={faBath} style={{ color: '#7e7e7e', fontSize: 16 }} />
+    <FontAwesomeIcon
+      icon={faBath}
+      style={{ color: '#7e7e7e', fontSize: 16, marginTop: -4 }}
+    />
   );
 };
 
@@ -32,7 +35,7 @@ export const Build = () => {
   return (
     <FontAwesomeIcon
       icon={faBuilding}
-      style={{ color: '#7e7e7e', fontSize: 16, margin: -4 }}
+      style={{ color: '#7e7e7e', fontSize: 16, marginTop: -2 }}
     />
   );
 };
@@ -41,7 +44,7 @@ export const Car = () => {
   return (
     <FontAwesomeIcon
       icon={faCarAlt}
-      style={{ color: '#7e7e7e', fontSize: 16, margin: -4 }}
+      style={{ color: '#7e7e7e', fontSize: 16 }}
     />
   );
 };

@@ -7,7 +7,10 @@ export const Body = styled.div`
 export const BasicInfo = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 export const Box = styled.div`
@@ -19,20 +22,22 @@ export const Title = styled.h1``;
 
 export const Divider = styled.div`
   height: 1px;
-  background-color: #6d7881;
-  margin: 10px 0px;
+  background-color: #cfd2d4;
+  margin: 20px 0px 10px;
 `;
 
 export const Preco = styled.h1`
-  font-size: 23px;
+  font-size: 30px;
   font-weight: 800;
   color: #6923e7;
+  margin: 0;
 `;
 
-export const PropertyPrice = styled.h5`
-  font-size: 14px;
-  line-height: 0px;
+export const PropertyPrice = styled.p`
+  font-size: 20px;
+  font-weight: 600;
   color: #aeb3ba;
+  text-align: right;
 `;
 
 export const Endereco = styled.h4`
