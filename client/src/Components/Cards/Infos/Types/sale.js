@@ -10,8 +10,8 @@ function Sale(props) {
 
   return (
     <PriceBox>
-      <PropertyPrice>por</PropertyPrice>
-      &#180;
+      <PropertyPrice>por </PropertyPrice>
+      &#160;
       <a href={`/imovel/${props.imovel.id_imovel}`}>
         <Price>{preco}</Price>
       </a>
