@@ -12,7 +12,7 @@ import {
   PrecoField
 } from './Filds';
 
-const Filds = () => {
+const Filds = ({ filtrar }) => {
   const imoveis = useSelector(state => state.still);
   const dispatch = useDispatch();
   function Tipo(e) {
@@ -45,7 +45,7 @@ const Filds = () => {
       <BanheiroField imoveis={imoveis} Banheiro={Banheiro} />
       <GaragemField imoveis={imoveis} Garagem={Garagem} />
       <PrecoField imoveis={imoveis} Preco={Preco} />
-      <Button>Pesquisar</Button>
+      <Button>{filtrar ? 'Filtrar' : 'Pesquisar'}</Button>
     </Fild>
   );
 };

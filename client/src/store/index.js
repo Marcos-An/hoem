@@ -17,7 +17,6 @@ function reducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case 'TIPO':
       console.log(action.value);
-
       return { ...state, Tipo: action.value };
     case 'CIDADE':
       console.log(action.value);

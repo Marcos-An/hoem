@@ -5,6 +5,7 @@ import Layout from '../Layout';
 
 const Home = lazy(() => import('../Pages/home'));
 const Imovel = lazy(() => import('../Pages/imovel'));
+const Imoveis = lazy(() => import('../Pages/imoveis'));
 
 export default function routes() {
   return (
@@ -13,6 +14,7 @@ export default function routes() {
         <Layout>
           <Switch>
             <Route exact path="/" component={() => <Home />} />
+            <Route exact path="/imoveis" component={() => <Imoveis />} />
             <Route
               exact
               path="/imovel/:id_imovel"

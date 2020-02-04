@@ -4,11 +4,11 @@ import { Form } from './styled';
 import { Provider } from 'react-redux';
 import store from '../../store';
 
-const FormFilds = () => {
+const FormFilds = props => {
   return (
     <Provider store={store}>
       <Form>
-        <Filds />
+        <Filds filtrar={props.filtrar} />
       </Form>
     </Provider>
   );

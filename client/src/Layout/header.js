@@ -9,16 +9,16 @@ const Head = () => {
       <nav>
         <ul>
           <li>
-            <a href="#"> Inicio </a>
+            <a href="/"> Inicio </a>
           </li>
           <li>
-            <a href="#"> Imoveis </a>
+            <a href="/imoveis"> Imoveis </a>
           </li>
           <li>
-            <a href="#"> Agentes </a>
+            <a href="#!"> Agentes </a>
           </li>
           <li>
-            <a href="#"> Contato </a>
+            <a href="#!"> Contato </a>
           </li>
         </ul>
       </nav>

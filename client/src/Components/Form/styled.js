@@ -8,7 +8,7 @@ export const Fild = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 15px;
-  align-items: center;
+  align-items: flex-end;
   @media only screen and (max-width: 600px) {
     grid-template-columns: 1fr !important;
   }
