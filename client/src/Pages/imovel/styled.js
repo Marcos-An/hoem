@@ -38,6 +38,10 @@ export const PropertyPrice = styled.p`
   font-weight: 600;
   color: #aeb3ba;
   text-align: right;
+  @media screen and (max-width: 600px) {
+    text-align: left;
+    margin-bottom: -2px;
+  }
 `;
 
 export const Endereco = styled.h4`

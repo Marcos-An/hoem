@@ -9,6 +9,9 @@ export const Infos = styled.div`
   display: grid;
   grid-template-columns: 1.3fr 0.7fr;
   grid-gap: 30px;
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Box = styled.div`
@@ -16,6 +19,7 @@ export const Box = styled.div`
   padding: 25px 20px;
   border-radius: 7px;
 `;
+
 export const Similares = styled.div`
   padding: 25px 0px;
   border-radius: 7px;

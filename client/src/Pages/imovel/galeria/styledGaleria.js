@@ -7,6 +7,9 @@ export const Body = styled.div`
     height: 90vh;
     width: 100%;
     border-radius: 6px;
+    @media screen and (max-width: 600px) {
+      height: 30vh;
+    }
   }
 `;
 
@@ -23,6 +26,10 @@ export const Thumb = styled.div`
   background-repeat: no-repeat;
   cursor: pointer;
 
+  @media screen and (max-width: 600px) {
+    height: 50px;
+    width: 100px;
+  }
   div {
     height: 100px;
     width: 200px;
@@ -31,6 +38,10 @@ export const Thumb = styled.div`
     background-color: #6923e7;
     :hover {
       opacity: 0.4;
+    }
+    @media screen and (max-width: 600px) {
+      height: 50px;
+      width: 100px;
     }
   }
 `;

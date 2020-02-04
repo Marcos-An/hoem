@@ -7,7 +7,6 @@ const API_URL = '/api/imoveis/similares/';
 function PropriedadesSimilares(props) {
   const FINALIDADE = props.imovel.finalidade;
   const [imoveis, setImoveis] = useState([]);
-  console.log(FINALIDADE);
 
   useEffect(() => {
     fetch(`${API_URL}${FINALIDADE}`)
