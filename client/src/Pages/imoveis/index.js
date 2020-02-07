@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Body,
   CardBox,
@@ -11,60 +11,70 @@ import {
 import { FilterIcon } from './icon';
 import Cards from '../../Components/Cards';
 import Pagination from '../../Components/Pagination';
-import { Provider } from 'react-redux';
-import store from '../../store';
+import { useSelector, useDispatch } from 'react-redux';
 import Filter from './Filter';
 const API_URL = '/api/imoveis';
 
 function Imoveis() {
-  const [imoveis, setImoveis] = useState([]);
-  const [open, setOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [selected, setSelected] = useState(1);
-  const [postsPerPage] = useState(9);
+  const data = useSelector(state => state);
+  const dispatch = useDispatch();
+  const [currentImoveis, setCurrent] = useState();
+  const indexOfFirstPost = data.currentPage * data.postsPerPage;
+  const indexOfLastPost = indexOfFirstPost - data.postsPerPage;
 
   useEffect(() => {
     fetch(`${API_URL}`)
       .then(result => result.json())
-      .then(result => setImoveis(result))
+      .then(result => dispatch({ type: 'IMOVEIS', value: result }))
       .catch(() => console.log('Error'));
-  }, [imoveis]);
+  }, []);
 
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentImoveis = imoveis.slice(indexOfFirstPost, indexOfLastPost);
+  const sliced = () => data.imoveis.slice(indexOfLastPost, indexOfFirstPost);
+  const set = () => {
+    let imov = sliced();
+    setCurrent(imov);
+  };
 
   const paginate = pageNumber => {
-    setCurrentPage(pageNumber);
-    setSelected(pageNumber);
+    dispatch({ type: 'CURRENT-PAGE', value: pageNumber });
+    dispatch({ type: 'SELECTED', value: pageNumber });
   };
+
+  function close() {
+    dispatch({ type: 'OPEN', value: !data.open });
+  }
+
+  setTimeout(function() {
+    set();
+  }, 100);
+
   return (
-    <Provider store={store}>
-      <Body>
-        <Texts onClick={() => setOpen(!open)}>
-          <Title>Imoveis</Title>
-          <Search>
-            <FilterIcon />
-            Filtrar
-          </Search>
-        </Texts>
-        <Divider />
-        {open ? <Filter /> : null}
-        <BoddyCard>
-          <CardBox>
-            {currentImoveis.map((item, index) => (
-              <Cards key={index} imovel={item} index={index} />
-            ))}
-          </CardBox>
-        </BoddyCard>
-        <Pagination
-          postsPerPage={postsPerPage}
-          totalPosts={imoveis.length}
-          paginate={paginate}
-          selected={selected}
-        />
-      </Body>
-    </Provider>
+    <Body>
+      <Texts>
+        <Title>Imoveis</Title>
+        <Search onClick={() => close()}>
+          <FilterIcon />
+          Filtrar
+        </Search>
+      </Texts>
+      <Divider />
+      {data.open ? <Filter /> : null}
+      <BoddyCard>
+        <CardBox>
+          {currentImoveis
+            ? currentImoveis.map((item, index) => (
+                <Cards key={index} imovel={item} index={index} />
+              ))
+            : null}
+        </CardBox>
+      </BoddyCard>
+      <Pagination
+        postsPerPage={data.postsPerPage}
+        totalPosts={data.imoveis.length}
+        paginate={paginate}
+        selected={data.selected}
+      />
+    </Body>
   );
 }
 

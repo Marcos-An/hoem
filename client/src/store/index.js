@@ -1,41 +1,44 @@
 import { createStore } from 'redux';
 
 const INITIAL_STATE = {
-  still: [
-    {
-      Tipo: '',
-      Cidade: '',
-      Finalidade: '',
-      Comodos: 0,
-      Banheiro: 0,
-      Garagem: 0,
-      Preco: 0
-    }
-  ]
+  Tipo: false,
+  Cidade: false,
+  Finalidade: false,
+  Comodos: false,
+  Banheiro: false,
+  Garagem: false,
+  Preco: false,
+  open: false,
+  currentPage: 1,
+  selected: 1,
+  postsPerPage: 9,
+  imoveis: []
 };
+
 function reducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case 'TIPO':
-      console.log(action.value);
       return { ...state, Tipo: action.value };
     case 'CIDADE':
-      console.log(action.value);
-      return { ...state, Tipo: action.value };
+      return { ...state, Cidade: action.value };
     case 'FINALIDADE':
-      console.log(action.value);
-      return { ...state, Tipo: action.value };
+      return { ...state, Finalidade: action.value };
     case 'COMODOS':
-      console.log(action.value);
-      return { ...state, Tipo: action.value };
+      return { ...state, Comodos: action.value };
     case 'BANHEIRO':
-      console.log(action.value);
-      return { ...state, Tipo: action.value };
+      return { ...state, Banheiro: action.value };
     case 'GARAGEM':
-      console.log(action.value);
-      return { ...state, Tipo: action.value };
+      return { ...state, Garagem: action.value };
     case 'PRECO':
-      console.log(action.value);
-      return { ...state, Tipo: action.value };
+      return { ...state, Preco: action.value };
+    case 'IMOVEIS':
+      return { ...state, imoveis: action.value };
+    case 'CURRENT-PAGE':
+      return { ...state, currentPage: action.value };
+    case 'SELECTED':
+      return { ...state, selected: action.value };
+    case 'OPEN':
+      return { ...state, open: action.value };
     default:
       break;
   }

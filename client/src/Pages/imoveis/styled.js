@@ -34,6 +34,9 @@ export const Search = styled.p`
   margin: 0px 10px 0px 0px;
   color: #6f42c1;
   font-size: 18px;
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export const Texts = styled.div`
@@ -41,9 +44,6 @@ export const Texts = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 3%;
-  :hover {
-    cursor: pointer;
-  }
 `;
 
 export const Divider = styled.div`

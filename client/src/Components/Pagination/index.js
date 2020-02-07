@@ -12,15 +12,15 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, selected }) => {
       <ul>
         {pageNumbers.map((number, index) =>
           selected === number ? (
-            <a href={'#!'} onClick={() => paginate(number)}>
+            <a href={'#!'} onClick={() => paginate(number)} key={index}>
               <Button style={{ backgroundColor: '#6923e7', color: 'white' }}>
-                <li key={index}>
+                <li>
                   <p>{number}</p>
                 </li>
               </Button>
             </a>
           ) : (
-            <a href={'#!'}>
+            <a href={'#!'} key={index}>
               <Button onClick={() => paginate(number)}>
                 <li key={index}>
                   <p>{number}</p>

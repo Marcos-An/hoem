@@ -13,8 +13,9 @@ import {
 } from './Filds';
 
 const Filds = ({ filtrar }) => {
-  const imoveis = useSelector(state => state.still);
+  const imoveis = useSelector(state => state);
   const dispatch = useDispatch();
+
   function Tipo(e) {
     dispatch({ type: 'TIPO', value: e.target.value });
   }
@@ -36,6 +37,7 @@ const Filds = ({ filtrar }) => {
   function Preco(e) {
     dispatch({ type: 'PRECO', value: e.target.value });
   }
+
   return (
     <Fild>
       <TipoField imoveis={imoveis} Tipo={Tipo} />
@@ -45,7 +47,7 @@ const Filds = ({ filtrar }) => {
       <BanheiroField imoveis={imoveis} Banheiro={Banheiro} />
       <GaragemField imoveis={imoveis} Garagem={Garagem} />
       <PrecoField imoveis={imoveis} Preco={Preco} />
-      <Button>{filtrar ? 'Filtrar' : 'Pesquisar'}</Button>
+      {filtrar ? <Button>Filtrar</Button> : <Button>Pesquisar</Button>}
     </Fild>
   );
 };

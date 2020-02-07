@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
 export const Slide = styled.div`
-  position: relative;
   padding: 0% 1.5%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-image: url(${props => props.image});
   background-repeat: no-repeat;
   background-position: center;
